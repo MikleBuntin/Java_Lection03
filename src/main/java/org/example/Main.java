@@ -9,22 +9,29 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-//        Scanner iScanner = new Scanner(System.in);
-////        System.out.printf("Привет! ");
-//        System.out.printf("Введте размер числового массива: ");
-//        String input_text = iScanner.nextLine();
-//        int arr_len = Integer.parseInt(input_text);
-//        iScanner.close();
 
-//        int[] array = new int[arr_len];
+        int[] array = new int[arr_len]; // Созадаём пустой список нужного размера
 
-//        for (int i = 0; i < array.length; i++) {
-//            array[i] = (int) (Math.random() * 100);
-//            System.out.println("Array[i]: " + array[i]);
+        //        Запрашиваем размер списка
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("Привет! ");
+        System.out.printf("Введте размер числового массива: ");
+        String input_text = iScanner.nextLine();
+        int arr_len = Integer.parseInt(input_text);
+        iScanner.close();
 
-            List<Integer> list = new ArrayList<>();
-            FillList(list);
-            OutPutList(list);
+        int[] resultArray = new int[arr_len]; // Созадаём пустой список нужного размера
+
+
+        for (int i = 0; i < array.length; i++) { // Запоняем список значениями, взятыми из списка планет
+            array[i] = (int) (Math.random() * 100);
+            System.out.println("Array[i]: " + resultArray[i]);
+
+
+            List<String> planets = new ArrayList<>();
+            List<String> resultList = new ArrayList<>();
+//            FillList(list);
+//            OutPutList(list);
         }
 
         public static void FillList(List<Integer> list){
@@ -37,10 +44,8 @@ public class Main {
         public static void OutPutList(List<Integer> list){
             list.sort(null);
             for (Integer integer : list) {
-                System.out.println(integer + ' ');
+                System.out.print(integer + " ");
             }
             System.out.println();
         }
-
-//        System.out.println("Hello world!");
     }
