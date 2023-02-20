@@ -11,12 +11,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        int[] resultArray = new int[arr_len]; // Созадаём пустой список нужного размера
+        int[] resultArray = new int[arr_len]; // Созадаём пустой список нужного размера
 
         String[] planets = {"Mercury", "Venera", "Earth", "Mars", "Jupyter", "Saturn", "Uran", "Neptun", "Pluton"};
 
             ArrayList<String> resultList = new ArrayList<>();
-            FillList(planets[]);
+            FillList(planets);
 //            OutPutList(list);
         }
 
@@ -32,8 +32,8 @@ public class Main {
             Random random = new Random();
 
             for (int i = 0; i < arr_len;  i++){
-                int rand = random.nextInt(planetList.toArray().length);
-                list.add(list.get(rand));
+                int rand = random.nextInt(planetList.length);
+                resultArray.add(list.get(rand));
 
 
             }
