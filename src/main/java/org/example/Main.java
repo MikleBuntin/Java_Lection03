@@ -12,13 +12,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        int[] resultArray = new int[arr_len]; // Созадаём пустой список нужного размера
+//        List<Integer> list = new ArrayList<>();
+//        FillSpisok(list);
+//        OutPutSpisok(list);
+        FillPlanetsList();
 
-//        String[] planets = {"Mercury", "Venera", "Earth", "Mars", "Jupyter", "Saturn", "Uran", "Neptun", "Pluton"};
-//
-//            ArrayList<String> resultList = new ArrayList<>();
-//            FillList(planets);
-//            OutPutList(list);
+
         }
         public static void FillSpisok(List<Integer> list) {
         Random random = new Random();
@@ -30,19 +29,36 @@ public class Main {
 public static void OutPutSpisok(List<Integer> list) {
         list.sort(null);
         for (Integer integer : list) {
-            System.out.print(Integer + " ");
+            System.out.print(integer + " ");
         }
         System.out.println();
 }
-        public static void FillPlanets() {
-            String[] AllPlanets = new String[]{"Earth", "Mars", "Jupiter", "UrAN"};
+        public static void FillPlanetsList() {
+            String[] AllPlanets = new String[]{"Earth", "Mars", "Jupiter", "Uran", "Pluton", "Saturn", "Venera"};
             List<String> planetList = new ArrayList<>();
-            for (int i = 0; i < 10; i++){
+            for (int i = 0; i < 1240; i++){
                 planetList.add(AllPlanets[(int) (Math.random() * AllPlanets.length)]);
             }
+//            for (String string : planetList) {
+//                System.out.println(string + " ");
+//            }
+//            System.out.println("+++");
+
+            planetList.sort(null);
             for (String string : planetList) {
                 System.out.println(string + " ");
             }
-            System.out.println();
+            System.out.println("+++");
+//            for (int i = 0; i < planetList.size(); i++){
+
+            for (int i = 0; i < AllPlanets.length; i++) {
+                int count = 0;
+                for (int j = 0; j < planetList.size(); j++){
+                if (planetList.get(j) == AllPlanets[i]) {
+                    count++;
+                }
+            }
+                System.out.println(count + "  x  " + AllPlanets[i]);
+            }
         }
     }
